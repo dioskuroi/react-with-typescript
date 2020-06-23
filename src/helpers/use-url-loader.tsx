@@ -21,7 +21,8 @@ const useURLLoader: IUserURLLoader<{ data: IShowResult | null, loading: boolean 
   }
   useEffect(() => {
     fetchData()
-  }, [fetchData])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, deps)
 
   return {
     data, 
